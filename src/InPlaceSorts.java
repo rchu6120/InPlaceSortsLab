@@ -46,7 +46,16 @@ public class InPlaceSorts {
     }
 
     public static void insertionSort(int[] list1) {
-
+        for (int i = 0; i < list1.length; i++) {
+            for (int j = i; j > 0; j--) {
+                if (list1[i] < list1[j]) {
+                    swap(list1, i, j);
+                }
+                else {
+                    j = 0;
+                }
+            }
+        }
     }
 
     public static int[] randIntArr(int count) {
@@ -79,6 +88,30 @@ public class InPlaceSorts {
             randomArr[num] = s;
         }
         return randomArr;
+    }
+
+    public static int[] copyIntArray(int[] list1) {
+        int[] list2 = new int[list1.length];
+        for (int i = 0; i < list1.length; i++) {
+            list2[i] = list1[i];
+        }
+        return list2;
+    }
+
+    public static double[] copyDoubleArray(double[] list1) {
+        double[] list2 = new double[list1.length];
+        for (int i = 0; i < list1.length; i++) {
+            list2[i] = list1[i];
+        }
+        return list2;
+    }
+
+    public static String[] copyStringArray(String[] list1) {
+        String[] list2 = new String[list1.length];
+        for (int i = 0; i < list1.length; i++) {
+            list2[i] = list1[i];
+        }
+        return list2;
     }
 
     public static boolean isSorted(int[] list1) {
