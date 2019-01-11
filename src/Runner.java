@@ -1,20 +1,24 @@
 public class Runner {
     public static void main(String[] args) {
-        int[] testArr = InPlaceSorts.randIntArr(10);
-        int[] finalArr = testArr;
+        int[] intArr = InPlaceSorts.randIntArr(20);
+        double[] doubleArr = InPlaceSorts.randDoubleArr(20);
+        String[] stringArr = InPlaceSorts.randStringArr(10,10);
+        int[] copyArr1 = InPlaceSorts.copyIntArray(intArr);
+        double[] copyArr2 = InPlaceSorts.copyDoubleArray(doubleArr);
+        String[] copyArr3 = InPlaceSorts.copyStringArray(stringArr);
         System.out.print("Before: ");
         System.out.println();
-        for (int num:testArr) {
+        for (int num:intArr) {
             System.out.print(num + " ");
             System.out.println();
         }
         long time = System.nanoTime();
-        InPlaceSorts.bubbleSort(finalArr);
+        InPlaceSorts.bubbleSort(copyArr3);
         time = System.nanoTime() - time;
         System.out.print("After: ");
         System.out.println();
-        for (int num:testArr) {
-            System.out.print(num + " ");
+        for (String str:copyArr3) {
+            System.out.print(str + " ");
             System.out.println();
         }
         if (!InPlaceSorts.isSorted(testArr) && !InPlaceSorts.checkSum(finalArr, testArr)) {
@@ -31,4 +35,5 @@ public class Runner {
         }
         System.out.println("Time taken: " + time + " nanoseconds");
     }
+
 }
