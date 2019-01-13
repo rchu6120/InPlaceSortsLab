@@ -69,7 +69,7 @@ public class InPlaceSorts {
     public static double[] randDoubleArr(int count) {
         double[] randomArr = new double[count];
         for (int i = 0; i < randomArr.length; i++) {
-            randomArr[i] = (int) (Math.random() * 10001);
+            randomArr[i] = Math.random() * 10001;
         }
         return randomArr;
     }
@@ -180,22 +180,24 @@ public class InPlaceSorts {
             return false;
         }
         int sum1 = 0;
+        int x = 0;
         int sum2 = 0;
         for (int i = 0; i < before.length; i++ ) {
-            sum1 = (int)before.charAt(i);
-
-
-        }
-        else {
-            for (int i = 0; i < before.length; i++) {
-                sum1 += before[i];
-                sum2 += after[i];
+            for (int j = 0; j < before[i].length(); j++) {
+                x += (int) before[i].charAt(j);
+                sum1 += x;
             }
-            if (sum1 != sum2) {
-                return false;
+            for (int n = 0; n < after[i].length(); n++) {
+                n += (int) after[i].charAt(n);
+                sum2 += n;
             }
-            return true;
         }
+        if (sum1 != sum2) {
+            return false;
+        }
+        return true;
     }
 
 }
+
+
