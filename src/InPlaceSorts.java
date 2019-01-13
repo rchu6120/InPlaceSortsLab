@@ -182,14 +182,15 @@ public class InPlaceSorts {
         int sum1 = 0;
         int x = 0;
         int sum2 = 0;
+        int m = 0;
         for (int i = 0; i < before.length; i++ ) {
             for (int j = 0; j < before[i].length(); j++) {
                 x += (int) before[i].charAt(j);
                 sum1 += x;
             }
             for (int n = 0; n < after[i].length(); n++) {
-                n += (int) after[i].charAt(n);
-                sum2 += n;
+                m += (int) after[i].charAt(n);
+                sum2 += m;
             }
         }
         if (sum1 != sum2) {
