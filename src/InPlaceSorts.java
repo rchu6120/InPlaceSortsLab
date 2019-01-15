@@ -33,12 +33,13 @@ public class InPlaceSorts {
 
     public static void selectionSort(double[] list1) {
         int minPos = 0;
-        for (int curPos = 0; curPos < list1.length-1; curPos++) {
+        for (int curPos = 0; curPos < list1.length - 1; curPos++) {
             double minVal = list1[curPos];
             minPos = curPos;
-            for (int i = curPos + 1; i < list1.length-1; i++) {
+            for (int i = curPos + 1; i < list1.length; i++) {
                 if (list1[i] < minVal) {
                     minVal = list1[i];
+                    minPos = i;
                 }
             }
             swap(list1, curPos, minPos);
@@ -48,8 +49,8 @@ public class InPlaceSorts {
     public static void insertionSort(int[] list1) {
         for (int i = 0; i < list1.length; i++) {
             for (int j = i; j > 0; j--) {
-                if (list1[i] < list1[j]) {
-                    swap(list1, i, j);
+                if (list1[j] < list1[j - 1]) {
+                    swap(list1, j, j - 1);
                 }
                 else {
                     j = 0;
@@ -180,20 +181,20 @@ public class InPlaceSorts {
             return false;
         }
         int sum1 = 0;
-        int x = 0;
         int sum2 = 0;
-        int y = 0;
         for (int i = 0; i < before.length; i++ ) {
+            int x = 0;
             for (int j = 0; j < before[i].length(); j++) {
                 x += (int) before[i].charAt(j);
-                sum1 += x;
             }
+            sum1 += x;
         }
         for (int n = 0; n < after.length; n++) {
+            int y = 0;
             for (int m = 0; m < after[n].length(); m++) {
                 y += (int) after[n].charAt(m);
-                sum2 += y;
             }
+            sum2 += y;
         }
         if (sum1 != sum2) {
             return false;

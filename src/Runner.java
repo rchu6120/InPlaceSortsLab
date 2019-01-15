@@ -39,6 +39,7 @@ public class Runner {
         System.out.println("Time taken: " + time + " nanoseconds");
         System.out.println();
 
+
         System.out.println("Selection Sort");
         System.out.println("Before: ");
         for (double doub:doubleArr) {
@@ -69,6 +70,7 @@ public class Runner {
         }
         System.out.println("Time taken: " + value + " nanoseconds");
         System.out.println();
+
 
         System.out.println("Insertion Sort");
         System.out.println("Before: ");
