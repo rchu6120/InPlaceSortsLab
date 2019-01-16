@@ -98,5 +98,7 @@ public class Runner {
             System.out.println("All of your numbers are correctly sorted and contain all of the same numbers within the previous array and the array after the sorting method!");
         }
         System.out.println("Time taken: " + amount + " nanoseconds");
+
     }
+
 }
