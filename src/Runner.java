@@ -7,7 +7,6 @@ public class Runner {
         String[] stringArr = InPlaceSorts.randStringArr(5,5);
         String[] copyArr3 = InPlaceSorts.copyStringArray(stringArr);
 
-
         System.out.println("Bubble Sort");
         System.out.println("Before: ");
         for (String str:stringArr) {
@@ -38,7 +37,6 @@ public class Runner {
         }
         System.out.println("Time taken: " + time + " nanoseconds");
         System.out.println();
-
 
         System.out.println("Selection Sort");
         System.out.println("Before: ");
@@ -71,7 +69,6 @@ public class Runner {
         System.out.println("Time taken: " + value + " nanoseconds");
         System.out.println();
 
-
         System.out.println("Insertion Sort");
         System.out.println("Before: ");
         for (int num:intArr) {
@@ -101,7 +98,5 @@ public class Runner {
             System.out.println("All of your numbers are correctly sorted and contain all of the same numbers within the previous array and the array after the sorting method!");
         }
         System.out.println("Time taken: " + amount + " nanoseconds");
-
     }
-
 }

@@ -23,7 +23,7 @@ public class InPlaceSorts {
         while (swaps != 0) {
             swaps = 0;
             for (int i = 0; i < list1.length - 1; i++) {
-                if (list1[i].compareTo(list1[i+1]) > 0) {
+                if (list1[i].compareTo(list1[i + 1]) > 0) {
                     swap(list1, i, i + 1);
                     swaps++;
                 }
@@ -32,7 +32,7 @@ public class InPlaceSorts {
     }
 
     public static void selectionSort(double[] list1) {
-        int minPos = 0;
+        int minPos;
         for (int curPos = 0; curPos < list1.length - 1; curPos++) {
             double minVal = list1[curPos];
             minPos = curPos;
@@ -135,7 +135,7 @@ public class InPlaceSorts {
 
     public static boolean isSorted(String[] list1) {
         for (int i = 0; i < list1.length - 1; i++) {
-            if (list1[i].compareTo(list1[i+1]) > 0) {
+            if (list1[i].compareTo(list1[i + 1]) > 0) {
                 return false;
             }
         }
